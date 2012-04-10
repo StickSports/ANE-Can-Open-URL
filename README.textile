@@ -1,0 +1,66 @@
+h1. Air Native Extension for iOS - Can Open URL
+
+This is an "Air native extension":http://www.adobe.com/devnet/air/native-extensions-for-air.html to test whether an app is installed to handle a URL scheme on the iOS platform.
+
+This extension enables checking for the existence of an app to handle any specified URL within an Air project. The extension has a single command that checks for a URL handler.
+
+h3. Version
+
+This is version 1.0 of this extension.
+
+h3. Binary files
+
+The bin folder contains the compiled extension and the default swc, which can be used for local testing if required by your development environment (Flash Builder shouldn't need it, but other IDEs may).
+
+h3. Building
+
+Requirements - Adobe Air SDK 3.1 or later, XCode IDE
+
+* Add the FlashRuntimeExtensions.h file from the Adobe Air sdk to the ios/CanOpenUrlIosExtension folder in the project.
+* Create a copy of the build/example.build.config file in the build folder, calling it build.config and change the properties in this file to match your system.
+** A certificate is required by the build script. This may be a self-signed certificate created by Adobe Air. This should not be an Apple developer certificate.
+* Run the ant build script build.xml. This creates the native extension and default swc file inside the bin folder.
+
+h3. The test project
+
+A simple test project is included for testing the extension. To build this air project
+
+* Run the ant build script test/build.xml. This creates the test ipa inside the test/bin folder.
+
+h3. Using the extension
+
+h4. To find whether an app exists to open a specific URL -
+
+@CanOpenUrl.canOpen( url : String ) : Boolean@
+
+h3. Example code
+
+You can see the feature in action in the source code of the test project.
+
+h3. Compiling your project
+
+This is an Air 3.1 extension. Specify the path to the iphone SDK when compiling the project, using the functionality built in to your IDE or the platformsdk parameter if building with adt from the command line or a build script.
+
+h3. Developers
+
+* "Stick Sports":http://www.sticksports.com/
+
+h2. License
+
+Air Native Extension for iOS Can Open URL
+.........................................
+
+Author: Richard Lord
+Owner: Stick Sports Ltd.
+http://www.sticksports.com
+
+Copyright (c) 2011, Stick Sports Ltd.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+* Neither the name of Stick Sports Ltd. nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+  
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.

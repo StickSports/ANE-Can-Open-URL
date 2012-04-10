@@ -1,0 +1,238 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7996B79A1529823C00D77FC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7996B7991529823C00D77FC0 /* Foundation.framework */; };
+		7996B7A01529823C00D77FC0 /* CanOpenUrlIosExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 7996B79F1529823C00D77FC0 /* CanOpenUrlIosExtension.m */; };
+		7996B7A71529828B00D77FC0 /* FlashRuntimeExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7996B7A61529828B00D77FC0 /* FlashRuntimeExtensions.h */; };
+		7996B7AC1529848800D77FC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7996B7AB1529848800D77FC0 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7996B7961529823C00D77FC0 /* libCanOpenUrlIosExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCanOpenUrlIosExtension.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7996B7991529823C00D77FC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7996B79D1529823C00D77FC0 /* CanOpenUrlIosExtension-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CanOpenUrlIosExtension-Prefix.pch"; sourceTree = "<group>"; };
+		7996B79F1529823C00D77FC0 /* CanOpenUrlIosExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanOpenUrlIosExtension.m; sourceTree = "<group>"; };
+		7996B7A61529828B00D77FC0 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
+		7996B7AB1529848800D77FC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7996B7931529823C00D77FC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7996B7AC1529848800D77FC0 /* UIKit.framework in Frameworks */,
+				7996B79A1529823C00D77FC0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7996B78B1529823B00D77FC0 = {
+			isa = PBXGroup;
+			children = (
+				7996B7AB1529848800D77FC0 /* UIKit.framework */,
+				7996B79B1529823C00D77FC0 /* CanOpenUrlIosExtension */,
+				7996B7981529823C00D77FC0 /* Frameworks */,
+				7996B7971529823C00D77FC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7996B7971529823C00D77FC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7996B7961529823C00D77FC0 /* libCanOpenUrlIosExtension.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7996B7981529823C00D77FC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7996B7991529823C00D77FC0 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7996B79B1529823C00D77FC0 /* CanOpenUrlIosExtension */ = {
+			isa = PBXGroup;
+			children = (
+				7996B7A61529828B00D77FC0 /* FlashRuntimeExtensions.h */,
+				7996B79F1529823C00D77FC0 /* CanOpenUrlIosExtension.m */,
+				7996B79C1529823C00D77FC0 /* Supporting Files */,
+			);
+			path = CanOpenUrlIosExtension;
+			sourceTree = "<group>";
+		};
+		7996B79C1529823C00D77FC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7996B79D1529823C00D77FC0 /* CanOpenUrlIosExtension-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7996B7941529823C00D77FC0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7996B7A71529828B00D77FC0 /* FlashRuntimeExtensions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7996B7951529823C00D77FC0 /* CanOpenUrlIosExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7996B7A31529823C00D77FC0 /* Build configuration list for PBXNativeTarget "CanOpenUrlIosExtension" */;
+			buildPhases = (
+				7996B7921529823C00D77FC0 /* Sources */,
+				7996B7931529823C00D77FC0 /* Frameworks */,
+				7996B7941529823C00D77FC0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CanOpenUrlIosExtension;
+			productName = CanOpenUrlIosExtension;
+			productReference = 7996B7961529823C00D77FC0 /* libCanOpenUrlIosExtension.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7996B78D1529823B00D77FC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Stick Sports Ltd";
+			};
+			buildConfigurationList = 7996B7901529823B00D77FC0 /* Build configuration list for PBXProject "CanOpenUrlIosExtension" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7996B78B1529823B00D77FC0;
+			productRefGroup = 7996B7971529823C00D77FC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7996B7951529823C00D77FC0 /* CanOpenUrlIosExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7996B7921529823C00D77FC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7996B7A01529823C00D77FC0 /* CanOpenUrlIosExtension.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7996B7A11529823C00D77FC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7996B7A21529823C00D77FC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7996B7A41529823C00D77FC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CanOpenUrlIosExtension.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CanOpenUrlIosExtension/CanOpenUrlIosExtension-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7996B7A51529823C00D77FC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/CanOpenUrlIosExtension.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CanOpenUrlIosExtension/CanOpenUrlIosExtension-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7996B7901529823B00D77FC0 /* Build configuration list for PBXProject "CanOpenUrlIosExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7996B7A11529823C00D77FC0 /* Debug */,
+				7996B7A21529823C00D77FC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7996B7A31529823C00D77FC0 /* Build configuration list for PBXNativeTarget "CanOpenUrlIosExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7996B7A41529823C00D77FC0 /* Debug */,
+				7996B7A51529823C00D77FC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7996B78D1529823B00D77FC0 /* Project object */;
+}
