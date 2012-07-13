@@ -1,12 +1,12 @@
-h1. Air Native Extension for iOS - Can Open URL
+h1. Air Native Extension for iOS and Android - Can Open URL
 
-This is an "Air native extension":http://www.adobe.com/devnet/air/native-extensions-for-air.html to test whether an app is installed to handle a URL scheme on the iOS platform.
+This is an "Air native extension":http://www.adobe.com/devnet/air/native-extensions-for-air.html to test whether an app is installed to handle a URL scheme on the iOS and Android platforms.
 
 This extension enables checking for the existence of an app to handle any specified URL within an Air project. The extension has a single command that checks for a URL handler.
 
 h3. Version
 
-This is version 1.0 of this extension.
+This is version 1.1 of this extension.
 
 h3. Binary files
 
@@ -14,9 +14,12 @@ The bin folder contains the compiled extension and the default swc, which can be
 
 h3. Building
 
-Requirements - Adobe Air SDK 3.1 or later, XCode IDE
+Requirements - Adobe Air SDK 3.1 or later, XCode IDE, Android SDK 2.2 or later, Java SDK, Apache Ant
 
-* Add the FlashRuntimeExtensions.h file from the Adobe Air sdk to the ios/CanOpenUrlIosExtension folder in the project.
+* iOS
+** Add the FlashRuntimeExtensions.h file from the Adobe Air sdk to the ios/CanOpenUrlIosExtension folder in the project.
+* Android
+** Add the FlashRuntimeExtensions.jar file from the Adobe Air sdk to the android/libs folder in the project.
 * Create a copy of the build/example.build.config file in the build folder, calling it build.config and change the properties in this file to match your system.
 ** A certificate is required by the build script. This may be a self-signed certificate created by Adobe Air. This should not be an Apple developer certificate.
 * Run the ant build script build.xml. This creates the native extension and default swc file inside the bin folder.
@@ -25,7 +28,7 @@ h3. The test project
 
 A simple test project is included for testing the extension. To build this air project
 
-* Run the ant build script test/build.xml. This creates the test ipa inside the test/bin folder.
+* Run the ant build script test/build.xml. This creates the test ipa and apk apps inside the test/bin folder.
 
 h3. Using the extension
 
@@ -37,13 +40,14 @@ h3. Example code
 
 You can see the feature in action in the source code of the test project.
 
-h3. Compiling your project
-
-This is an Air 3.1 extension. Specify the path to the iphone SDK when compiling the project, using the functionality built in to your IDE or the platformsdk parameter if building with adt from the command line or a build script.
-
 h3. Developers
 
 * "Stick Sports":http://www.sticksports.com/
+
+h3. Games using this extension
+
+* "Stick Tennis":http://itunes.apple.com/app/stick-tennis/id507086545?ls=1&mt=8
+* "Stick Cricket Super Sixes":http://itunes.apple.com/app/stick-cricket-super-sixes/id483135193?ls=1&mt=8
 
 h2. License
 

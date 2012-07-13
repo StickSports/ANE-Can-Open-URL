@@ -3,7 +3,7 @@
 	
 	<property file="build.config"/>
 		
-	<target name="all" depends="ios,swc,default,package" description="Full build of extension"/>
+	<target name="all" depends="ios,android,swc,default,package" description="Full build of extension"/>
 	
 	<target name="ios" description="Build iOS Library">
 		<mkdir dir="../temp/ios/build/"/>
@@ -18,6 +18,22 @@
 		<copy file="../temp/ios/build/Release-iphoneos/lib${name}IosExtension.a" todir="../temp/ios" overwrite="true"/>
 		
 		<delete dir="../temp/ios/build/"/>
+	</target>
+		
+	<target name="android" description="Build android Library">
+		<delete dir="../android/temp"/>
+		<mkdir dir="../android/temp/classes"/>
+
+		<javac srcdir="../android/src" destdir="../android/temp/classes" includeantruntime="false">
+			<classpath>
+				<pathelement location="${android.sdk}/android.jar"/>
+				<pathelement location="../android/libs/FlashRuntimeExtensions.jar"/>
+			</classpath>
+		</javac>
+
+		<mkdir dir="../temp/android/"/>
+		<jar basedir="../android/temp/classes" destfile="../temp/android/${name}AndroidExtension.jar"/>
+		<delete dir="../android/temp"/>
 	</target>
 		
 	<target name="swc" description="Build swc library">
@@ -41,6 +57,7 @@
 
 		<unzip src="../temp/swc/${name}.swc" dest="../temp/swc/content" overwrite="true"/>
 		<copy file="../temp/swc/content/library.swf" todir="../temp/ios" overwrite="true"/>
+		<copy file="../temp/swc/content/library.swf" todir="../temp/android" overwrite="true"/>
 		<delete dir="../temp/swc/content/"/>
 	</target>
 	
@@ -82,7 +99,8 @@
 			<arg value="${name}.ane"/>
 			<arg value="../build/extension.xml"/>
 			<arg line="-swc swc/${name}.swc"/>
-			<arg line="-platform iPhone-ARM -C ios/ ."/>
+			<arg line="-platform iPhone-ARM -platformoptions ../build/platform.xml -C ios/ ."/>
+			<arg line="-platform Android-ARM -C android/ ."/>
 			<arg line="-platform default -C default/ ."/>
 		</exec>
 		

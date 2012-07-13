@@ -35,4 +35,22 @@
 		</InfoAdditions>
 		<requestedDisplayResolution>high</requestedDisplayResolution>
 	</iPhone>
+	
+	<android>
+		<manifestAdditions>
+			<![CDATA[
+				<manifest android:installLocation="auto"> 
+					<application android:enabled="true" android:hardwareAccelerated="true">
+						<activity android:excludeFromRecents="false" android:hardwareAccelerated="true">
+							<intent-filter>
+								<action android:name="android.intent.action.MAIN"/>
+								<category android:name="android.intent.category.LAUNCHER"/>
+							</intent-filter>
+						</activity>
+					</application>
+					<uses-permission android:name="android.permission.INTERNET"/>
+				</manifest>
+			]]>
+		</manifestAdditions>
+	</android>
 </application>

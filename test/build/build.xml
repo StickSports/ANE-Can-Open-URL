@@ -3,7 +3,7 @@
 	
 	<property file="build.config"/>
 
-	<target name="build.debug" depends="debug-compile,debug-package"
+	<target name="build.debug" depends="debug-compile,ios-package,android-package"
 		description="Build and package the app in debug mode."/>
 	
 	<target name="debug-compile" description="Build a debug version of the application swf">
@@ -24,7 +24,7 @@
 		
 	</target>
 	
-	<target name="debug-package" description="Create the debug application .ipa package">
+	<target name="ios-package" description="Create the debug application .ipa package">
 		<copy file="./CanOpenUrlExtensionTest-app.xml" todir="../bin" overwrite="true"/>
 		<copy file="./Default.png" todir="../bin" overwrite="true"/>
 		<copy todir="../bin/icons">
@@ -51,6 +51,31 @@
 			<arg value="icons"/>
 			<arg line="-extdir ../../bin/"/>
 			<arg line="-platformsdk ${ios.sdk}"/>
+		</exec>
+	</target>
+	
+	<target name="android-package" description="Create the debug application .apk package">
+		<copy file="./CanOpenUrlExtensionTest-app.xml" todir="../bin" overwrite="true"/>
+		<copy todir="../bin/icons">
+		    <fileset dir="./icons"/>
+		</copy>
+
+		<exec executable="${sdk.home}/bin/adt" failonerror="true" dir="../bin">
+			<arg value="-package"/>
+			<arg value="-target"/>
+			<arg value="apk-debug"/>
+			<arg value="-connect"/>
+			<arg value="-storetype"/>
+			<arg value="pkcs12"/>
+			<arg value="-keystore"/>
+			<arg value="${android.keystore.file}"/>
+			<arg value="-storepass"/>
+			<arg value="${android.keystore.password}"/>
+			<arg value="CanOpenUrlExtensionTest.apk"/>
+			<arg value="CanOpenUrlExtensionTest-app.xml"/>
+			<arg value="CanOpenUrlExtensionTest.swf"/>
+			<arg value="icons"/>
+			<arg line="-extdir ../../bin/"/>
 		</exec>
 	</target>
 </project>

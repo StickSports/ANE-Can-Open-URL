@@ -1,12 +1,19 @@
 <extension xmlns="http://ns.adobe.com/air/extension/3.1">
 	<id>com.sticksports.nativeExtensions.CanOpenUrl</id>
-	<versionNumber>1.0.0</versionNumber>
+	<versionNumber>1.1.0</versionNumber>
 	<platforms>
 		<platform name="iPhone-ARM">
 			<applicationDeployment>
 				<nativeLibrary>libCanOpenUrlIosExtension.a</nativeLibrary>
 				<initializer>CanOpenUrlExtensionInitializer</initializer>
 				<finalizer>CanOpenUrlExtensionFinalizer</finalizer>
+			</applicationDeployment>
+		</platform>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>CanOpenUrlAndroidExtension.jar</nativeLibrary>
+				<initializer>com.sticksports.nativeExtensions.canOpenUrl.CanOpenUrlExtension</initializer>
+				<finalizer>com.sticksports.nativeExtensions.canOpenUrl.CanOpenUrlExtension</finalizer>
 			</applicationDeployment>
 		</platform>
 		<platform name="default">
