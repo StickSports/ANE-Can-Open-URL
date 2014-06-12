@@ -16,6 +16,13 @@
 				<finalizer>com.sticksports.nativeExtensions.canOpenUrl.CanOpenUrlExtension</finalizer>
 			</applicationDeployment>
 		</platform>
+		<platform name="Android-x86">
+			<applicationDeployment>
+				<nativeLibrary>CanOpenUrlAndroidExtension.jar</nativeLibrary>
+				<initializer>com.sticksports.nativeExtensions.canOpenUrl.CanOpenUrlExtension</initializer>
+				<finalizer>com.sticksports.nativeExtensions.canOpenUrl.CanOpenUrlExtension</finalizer>
+			</applicationDeployment>
+		</platform>
 		<platform name="default">
 			<applicationDeployment/>
 		</platform>

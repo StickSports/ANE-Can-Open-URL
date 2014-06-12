@@ -51,9 +51,6 @@ h3. Games using this extension
 
 h2. License
 
-Air Native Extension for iOS Can Open URL
-.........................................
-
 Author: Richard Lord
 Owner: Stick Sports Ltd.
 http://www.sticksports.com
