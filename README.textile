@@ -1,5 +1,7 @@
 h1. Air Native Extension for iOS and Android - Can Open URL
 
+*Please note that we are no longer able to support this project and are not contributing to it.*
+
 This is an "Air native extension":http://www.adobe.com/devnet/air/native-extensions-for-air.html to test whether an app is installed to handle a URL scheme on the iOS and Android platforms.
 
 This extension enables checking for the existence of an app to handle any specified URL within an Air project. The extension has a single command that checks for a URL handler.
