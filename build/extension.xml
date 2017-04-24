@@ -1,4 +1,4 @@
-<extension xmlns="http://ns.adobe.com/air/extension/3.1">
+<extension xmlns="http://ns.adobe.com/air/extension/25.0">
 	<id>com.sticksports.nativeExtensions.CanOpenUrl</id>
 	<versionNumber>1.1.0</versionNumber>
 	<platforms>

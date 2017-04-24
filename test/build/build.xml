@@ -16,7 +16,7 @@
 			<arg line='-default-frame-rate 30'/>
 			<arg line='-debug=true'/>
 			<arg line='-optimize=true'/>
-			<arg line='-swf-version=13'/>
+			<arg line='-swf-version=36'/>
 			<arg line='-external-library-path+="../../bin/CanOpenUrl.swc"'/>
 			<arg line='-output CanOpenUrlExtensionTest.swf'/>
 			<arg line='../src/CanOpenUrlExtensionTest.as'/>

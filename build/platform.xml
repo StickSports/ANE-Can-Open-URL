@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<platform xmlns="http://ns.adobe.com/air/extension/3.1">
+<platform xmlns="http://ns.adobe.com/air/extension/25.0">
 
 	<!-- The version of iOS SDK that the app should be linked with. Optional. -->
-	<sdkVersion>4.2</sdkVersion>
+	<sdkVersion>5.1.1</sdkVersion>
 
 	<!-- Options that should be passed to the linker. Optional. -->
 	<linkerOptions>
-		<option>-ios_version_min 4.2</option>
+		<option>-ios_version_min 5.1.1</option>
 	</linkerOptions>
 
 </platform>

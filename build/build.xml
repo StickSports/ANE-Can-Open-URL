@@ -24,9 +24,9 @@
 		<delete dir="../android/temp"/>
 		<mkdir dir="../android/temp/classes"/>
 
-		<javac srcdir="../android/src" destdir="../android/temp/classes" includeantruntime="false">
+		<javac srcdir="../android/src" destdir="../android/temp/classes" includeantruntime="false" source="1.7" target="1.7">
 			<classpath>
-				<pathelement location="${android.sdk}/android.jar"/>
+				<pathelement location="${android.sdk}/platforms/android-25/android.jar"/>
 				<pathelement location="../android/libs/FlashRuntimeExtensions.jar"/>
 			</classpath>
 		</javac>
@@ -50,7 +50,7 @@
 		<exec executable="${sdk.home}/bin/compc" failonerror="true">
 			<arg line='-source-path ../actionscript/src'/>
 			<arg line='-output ../temp/swc/${name}.swc'/>
-			<arg line='-swf-version=13'/>
+			<arg line='-swf-version=36'/>
 			<arg line='-external-library-path+="${sdk.home}/frameworks/libs/air/airglobal.swc"'/>
 			<arg line='-include-classes ${classlist}'/>
 		</exec>
@@ -75,7 +75,7 @@
 		<exec executable="${sdk.home}/bin/compc" failonerror="true">
 			<arg line='-source-path ../default/src'/>
 			<arg line='-output ../temp/default/${name}.swc'/>
-			<arg line='-swf-version=13'/>
+			<arg line='-swf-version=36'/>
 			<arg line='-external-library-path+="${sdk.home}/frameworks/libs/air/airglobal.swc"'/>
 			<arg line='-include-classes ${classlist2}'/>
 		</exec>
@@ -88,6 +88,8 @@
 	<target name="package" description="Create the extension package">
 		<exec executable="${sdk.home}/bin/adt" failonerror="true" dir="../temp">
 			<arg value="-package"/>
+			<arg value="-tsa" />
+			<arg value="${timestamp.code.signing.url}" />
 			<arg value="-storetype"/>
 			<arg value="pkcs12"/>
 			<arg value="-keystore"/>
@@ -107,6 +109,8 @@
 		
 		<move file="../temp/${name}.ane" todir="../bin"/>
 		<move file="../temp/default/${name}.swc" todir="../bin"/>
+		<copy file="../bin/${name}.ane" tofile="../../StickTennisMobile/extensions/${name}.ane" overwrite="true" />
+		<copy file="../bin/${name}.swc" tofile="../../StickTennisMobile/extensionLibs/${name}.swc" overwrite="true" />
 		<delete dir="../temp"/>
 	</target>
 </project>
